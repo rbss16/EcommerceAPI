@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+header 
+{
+    background-color: #131921;
+    color: black;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.header-top
+ {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+.logo 
+{
+    background-image: url("https://etchdfilms.com.au/wp-content/uploads/2018/03/Alibaba-logo-white.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px; 
+    height: 70px; 
+}
+.search-bar 
+{
+    display: flex;
+    flex: 1;
+    max-width: 700px;
+    margin-left: 15px;
+}
+.search-bar input[type="text"]
+ {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.search-bar button 
+{
+    padding: 10px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.header-right 
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-right a 
+{
+    color: white;
+    text-decoration: none;
+    margin-left: 8px;
+}
+.nav 
+{
+    width: 100%;
+    background-color: #232f3e;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+.nav a 
+{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.nav a:hover 
+{
+    text-decoration: underline;
+}
+h1
+ {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #2b2b2b;
+}
+.product-container
+ {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #fff; 
+}
+.product-card
+ {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+.product-card:hover 
+{
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid #a1c4fd;
+}
+.product-card img
+ {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.product-card img:hover 
+{
+    transform: scale(1.05);
+}
+.product-card h2 
+{
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+.product-card p
+ {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+.product-card .price
+ {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ff6b6b; 
+}
+footer 
+{
+    background-color: #131921;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+.feedback-form 
+{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    display: none;
+}
+.feedback-form h2 
+{
+    margin-bottom: 15px;
+    color: #333;
+}
+.feedback-form input,
+.feedback-form textarea
+ {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.feedback-form button
+ {
+    padding: 10px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media (max-width: 768px)
+ {
+    .header-top
+     {
+        flex-direction: column;
+    }
+    .search-bar 
+    {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .header-right 
+    {
+        flex-direction: column;
+    }
+    .product-card img 
+    {
+        height: 150px;
+    }
+}
+.footer {
+background-color: #282c34;
+color: #ffffff;
+padding: 20px;
+font-size: 14px;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.footer-section {
+flex: 1;
+margin: 10px;
+}
+
+.footer-section h4 {
+margin-bottom: 10px;
+font-size: 16px;
+color: #f9c74f; /* Yellow color for headings */
+}
+
+.footer-section ul {
+list-style-type: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin: 5px 0;
+}
+
+.footer-section a {
+color: #ffffff;
+text-decoration: none;
+}
+
+.footer-section a:hover {
+text-decoration: underline;
+}
+
+.footer-bottom {
+text-align: center;
+margin-top: 20px;
+font-size: 12px;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s ease;
+}
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.modal-content button:hover {
+    background-color: #ffa62b;
+}
+.close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+.cart-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s ease;
+}
+.cart-modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.cart-modal-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.cart-modal-content ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.cart-modal-content img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+.cart-modal-content .close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.order-modal {
+display: none; 
+position: fixed; 
+z-index: 9999; 
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+justify-content: center;
+align-items: center;
+}
+
+.order-modal-content {
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+width: 100%;
+max-width: 800px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.order-modal-content input,
+.order-modal-content textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px; /* Increased spacing */
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
